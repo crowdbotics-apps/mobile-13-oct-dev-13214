@@ -356,3 +356,78 @@ export const rest_auth_user_partial_updateFailed = (error, starter) => ({
   error,
   starter
 })
+export const api_v1_useres_list = () => ({ type: types.API_V1_USERES_LIST })
+export const api_v1_useres_listSucceeded = (response, starter) => ({
+  type: types.API_V1_USERES_LIST_SUCCEEDED,
+  response,
+  starter
+})
+export const api_v1_useres_listFailed = (error, starter) => ({
+  type: types.API_V1_USERES_LIST_FAILED,
+  error,
+  starter
+})
+export const api_v1_useres_create = data => ({
+  type: types.API_V1_USERES_CREATE,
+  data
+})
+export const api_v1_useres_createSucceeded = (response, starter) => ({
+  type: types.API_V1_USERES_CREATE_SUCCEEDED,
+  response,
+  starter
+})
+export const api_v1_useres_createFailed = (error, starter) => ({
+  type: types.API_V1_USERES_CREATE_FAILED,
+  error,
+  starter
+})
+export const api_v1_useres_read = () => ({ type: types.API_V1_USERES_READ })
+export const api_v1_useres_readSucceeded = (response, starter) => ({
+  type: types.API_V1_USERES_READ_SUCCEEDED,
+  response,
+  starter
+})
+export const api_v1_useres_readFailed = (error, starter) => ({
+  type: types.API_V1_USERES_READ_FAILED,
+  error,
+  starter
+})
+export const api_v1_useres_update = data => ({
+  type: types.API_V1_USERES_UPDATE,
+  data
+})
+export const api_v1_useres_updateSucceeded = (response, starter) => ({
+  type: types.API_V1_USERES_UPDATE_SUCCEEDED,
+  response,
+  starter
+})
+export const api_v1_useres_updateFailed = (error, starter) => ({
+  type: types.API_V1_USERES_UPDATE_FAILED,
+  error,
+  starter
+})
+export const api_v1_useres_partial_update = data => ({
+  type: types.API_V1_USERES_PARTIAL_UPDATE,
+  data
+})
+export const api_v1_useres_partial_updateSucceeded = (response, starter) => ({
+  type: types.API_V1_USERES_PARTIAL_UPDATE_SUCCEEDED,
+  response,
+  starter
+})
+export const api_v1_useres_partial_updateFailed = (error, starter) => ({
+  type: types.API_V1_USERES_PARTIAL_UPDATE_FAILED,
+  error,
+  starter
+})
+export const api_v1_useres_delete = () => ({ type: types.API_V1_USERES_DELETE })
+export const api_v1_useres_deleteSucceeded = (response, starter) => ({
+  type: types.API_V1_USERES_DELETE_SUCCEEDED,
+  response,
+  starter
+})
+export const api_v1_useres_deleteFailed = (error, starter) => ({
+  type: types.API_V1_USERES_DELETE_FAILED,
+  error,
+  starter
+})

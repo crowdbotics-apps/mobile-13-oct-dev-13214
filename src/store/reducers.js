@@ -64,6 +64,42 @@ export default function apiReducer(state = initialState, action) {
       return Object.assign({}, state, {
         mobileoctAPI: [...state.mobileoctAPI, action.response]
       })
+    case types.API_V1_USERES_LIST:
+    case types.API_V1_USERES_LIST_SUCCEEDED:
+    case types.API_V1_USERES_LIST_FAILED:
+      return Object.assign({}, state, {
+        mobileoctAPI: [...state.mobileoctAPI, action.response]
+      })
+    case types.API_V1_USERES_CREATE:
+    case types.API_V1_USERES_CREATE_SUCCEEDED:
+    case types.API_V1_USERES_CREATE_FAILED:
+      return Object.assign({}, state, {
+        mobileoctAPI: [...state.mobileoctAPI, action.response]
+      })
+    case types.API_V1_USERES_READ:
+    case types.API_V1_USERES_READ_SUCCEEDED:
+    case types.API_V1_USERES_READ_FAILED:
+      return Object.assign({}, state, {
+        mobileoctAPI: [...state.mobileoctAPI, action.response]
+      })
+    case types.API_V1_USERES_UPDATE:
+    case types.API_V1_USERES_UPDATE_SUCCEEDED:
+    case types.API_V1_USERES_UPDATE_FAILED:
+      return Object.assign({}, state, {
+        mobileoctAPI: [...state.mobileoctAPI, action.response]
+      })
+    case types.API_V1_USERES_PARTIAL_UPDATE:
+    case types.API_V1_USERES_PARTIAL_UPDATE_SUCCEEDED:
+    case types.API_V1_USERES_PARTIAL_UPDATE_FAILED:
+      return Object.assign({}, state, {
+        mobileoctAPI: [...state.mobileoctAPI, action.response]
+      })
+    case types.API_V1_USERES_DELETE:
+    case types.API_V1_USERES_DELETE_SUCCEEDED:
+    case types.API_V1_USERES_DELETE_FAILED:
+      return Object.assign({}, state, {
+        mobileoctAPI: [...state.mobileoctAPI, action.response]
+      })
     case types.REST_AUTH_LOGIN_CREATE:
     case types.REST_AUTH_LOGIN_CREATE_SUCCEEDED:
     case types.REST_AUTH_LOGIN_CREATE_FAILED:

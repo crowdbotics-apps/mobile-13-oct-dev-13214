@@ -1,6 +1,11 @@
 import axios from "axios"
+const newConnector = axios.create({
+  baseURL:
+    "https://crowdbotics-slack-dev.herokuapp.com/dashboard/app/13214/storyboard/12169/",
+  headers: { Accept: "application/json", "Content-Type": "application/json" }
+})
 const mobileoctAPI = axios.create({
-  baseURL: "https://mobile-13-oct-dev-13214.botics.co/",
+  baseURL: "https://mobile-13-oct-dev-13214-prod.herokuapp.com/",
   headers: { Accept: "application/json", "Content-Type": "application/json" }
 })
 function api_v1_customtext_list(action) {
@@ -40,6 +45,28 @@ function api_v1_login_create(action) {
 }
 function api_v1_signup_create(action) {
   return mobileoctAPI.post(`/api/v1/signup/`, null, { data: action.data })
+}
+function api_v1_useres_list(action) {
+  return mobileoctAPI.get(`/api/v1/useres/`)
+}
+function api_v1_useres_create(action) {
+  return mobileoctAPI.post(`/api/v1/useres/`, null, { data: action.data })
+}
+function api_v1_useres_read(action) {
+  return mobileoctAPI.get(`/api/v1/useres/${action.id}/`)
+}
+function api_v1_useres_update(action) {
+  return mobileoctAPI.put(`/api/v1/useres/${action.id}/`, null, {
+    data: action.data
+  })
+}
+function api_v1_useres_partial_update(action) {
+  return mobileoctAPI.patch(`/api/v1/useres/${action.id}/`, null, {
+    data: action.data
+  })
+}
+function api_v1_useres_delete(action) {
+  return mobileoctAPI.delete(`/api/v1/useres/${action.id}/`)
 }
 function rest_auth_login_create(action) {
   return mobileoctAPI.post(`/rest-auth/login/`, null, { data: action.data })
@@ -95,6 +122,12 @@ export const apiService = {
   api_v1_homepage_partial_update,
   api_v1_login_create,
   api_v1_signup_create,
+  api_v1_useres_list,
+  api_v1_useres_create,
+  api_v1_useres_read,
+  api_v1_useres_update,
+  api_v1_useres_partial_update,
+  api_v1_useres_delete,
   rest_auth_login_create,
   rest_auth_logout_list,
   rest_auth_logout_create,
